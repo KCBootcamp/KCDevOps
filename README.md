@@ -7,7 +7,7 @@ Nota: Se ha optado por obtener una Elastic IP en para el servidor por tanto tamb
 ##Acceso por IP o dominio
 Al acceder por IP o dominio se accederá al portfolio del autor.
 IP: 23.20.0.234
-Dominio/URL: [bhavishchandnani.es](bhavishchandnani.es) o [www.bhavishchandnani.es](www.bhavish.chandnani.es)
+Dominio/URL: bhavishchandnani.es o www.bhavishchandnani.es
 
 ##Acceso a Nodepop
 El acceso a la aplicación nodepop (se utiliza la app proporcionada por el profesor por facilidad).
@@ -15,14 +15,14 @@ El acceso a la aplicación nodepop (se utiliza la app proporcionada por el profe
 ###Acceso a la página principal
 Al acceder a la página principal se puede observar las info para poder instalar e utilizar la api de nodepop
 
-URL: [nodepop.bhavishchandnani.es](nodepop.bhavishchandnani.es)
+URL: nodepop.bhavishchandnani.es
 
 ###Acceso a archivos estáticos 
 Para acceder a archivos estáticos se puede realizar con uan consulta a images. Para comprobar que se usa NGINX, se ha incluido en la cabecera el parametro X-Author: @BVC
 
 URLS de ejemplo:  
-	+ [http://nodepop.bhavishchandnani.es/images/anuncios/bici.jpg](http://nodepop.bhavishchandnani.es/images/anuncios/bici.jpg)
-	+ [http://nodepop.bhavishchandnani.es/images/anuncios/iphone.png](http://nodepop.bhavishchandnani.es/images/anuncios/iphone.png)
+	http://nodepop.bhavishchandnani.es/images/anuncios/bici.jpg
+	http://nodepop.bhavishchandnani.es/images/anuncios/iphone.png
 
 ##Acceso a la API
 
@@ -30,12 +30,12 @@ URLS de ejemplo:
 Para crear un usuario, hay que acudir a la url de usuarios/register incluyento los parámetros de nombre, email y clave en el body con x-www-form-urlencoded. 
 
 URL:
-	+ [nodepop.bhavishchandnani.es/apiv1/usuarios/register](nodepop.bhavishchandnani.es/apiv1/usuarios/register)
+	nodepop.bhavishchandnani.es/apiv1/usuarios/register
 
 Parámetros de un usuario de ejemplo (ya creado):
-	+ nombre: usuario
-	+ email: usuario@ejemplo.es
-	+ clave: 123456
+	nombre: usuario
+	email: usuario@ejemplo.es
+	clave: 123456
 
 Respuesta JSON:
 	{
@@ -47,11 +47,11 @@ Respuesta JSON:
 Para iniciar, hay que acudir a la url de usuarios/authenticate incluyento los parámetros email y clave en el body con x-www-form-urlencoded. La respuesta será el token de acceso para la api.
 
 URL:
-	+ [nodepop.bhavishchandnani.es/apiv1/usuarios/authenticate](nodepop.bhavishchandnani.es/apiv1/usuarios/authenticate)
+	nodepop.bhavishchandnani.es/apiv1/usuarios/authenticate
 
 Parámetros de un usuario de ejemplo (ya creado):
-	+ email: usuario@ejemplo.es
-	+ clave: 123456
+	email: usuario@ejemplo.es
+	clave: 123456
 
 Respuesta JSON:
 	{
@@ -63,7 +63,9 @@ Respuesta JSON:
 Para consultar anuncios, hay que acudir a la url de anuncios/ incluyento los parámetros de los filtros que se quieren realizar y también inclueyndo el token de acceso. La respuesta será un JSON con el resultado de la busqueda de lso anuncios
 
 URL:
-	+ [nodepop.bhavishchandnani.es/apiv1/anuncios?token={token}](eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjp7Il9pZCI6IjU3NDliOTEzOWNkNzY5OGExODQ3ZTQ1OSIsIm5vbWJyZSI6InVzdWFyaW8iLCJlbWFpbCI6InVzdWFyaW9AZWplbXBsby5lcyIsImNsYXZlIjoiOGQ5NjllZWY2ZWNhZDNjMjlhM2E2MjkyODBlNjg2Y2YwYzNmNWQ1YTg2YWZmM2NhMTIwMjBjOTIzYWRjNmM5MiIsIl9fdiI6MH0sImlhdCI6MTQ2NDQ1MzY2NSwiZXhwIjoxNDY0NTQwMDY1fQ.EbPpGOG8MAf2ilHt_EXfLyDR_3BUxwySd-yNdGfjF2Y)
+	nodepop.bhavishchandnani.es/apiv1/anuncios?token={token}
+
+	Token ejemplo: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjp7Il9pZCI6IjU3NDliOTEzOWNkNzY5OGExODQ3ZTQ1OSIsIm5vbWJyZSI6InVzdWFyaW8iLCJlbWFpbCI6InVzdWFyaW9AZWplbXBsby5lcyIsImNsYXZlIjoiOGQ5NjllZWY2ZWNhZDNjMjlhM2E2MjkyODBlNjg2Y2YwYzNmNWQ1YTg2YWZmM2NhMTIwMjBjOTIzYWRjNmM5MiIsIl9fdiI6MH0sImlhdCI6MTQ2NDQ1MzY2NSwiZXhwIjoxNDY0NTQwMDY1fQ.EbPpGOG8MAf2ilHt_EXfLyDR_3BUxwySd-yNdGfjF2Y
 
 	Nota: se ha incluido en el enlace un token pero si este caduca habrá que iniciar sesión obtener otro e intcluirlo en las consutlas a la api
 
